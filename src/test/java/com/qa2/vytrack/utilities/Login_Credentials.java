@@ -25,19 +25,25 @@ public class Login_Credentials {
         //1.3.
         System.out.println("Size of the UsernameList is : " + UsernameList.size() + " elements");
         System.out.println("------------------------------------------------------");
+
+        //1.4.
         return UsernameList;
     }
 
 
     /** 2. ArrayList with Correct passwords */
     public static ArrayList getCorrPasswords () {
-        //1.
+        //2.1.
         ArrayList<String> PasswordsList = new ArrayList<>();
 
-        //2.
+        //2.2.
         PasswordsList.add("UserUser123");
 
-        //3.
+        //2.3.
+        System.out.println("Size of the PasswordList is : " + PasswordsList.size() + " elements");
+        System.out.println("------------------------------------------------------");
+
+        //2.4.
         return  PasswordsList;
     }
 
