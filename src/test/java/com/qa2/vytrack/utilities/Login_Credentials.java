@@ -32,7 +32,7 @@ public class Login_Credentials {
 
 
     /** 2. ArrayList with Correct passwords */
-    public static ArrayList getCorrPasswords () {
+    public static ArrayList<String> getCorrPasswordList () {
         //2.1.
         ArrayList<String> PasswordsList = new ArrayList<>();
 
