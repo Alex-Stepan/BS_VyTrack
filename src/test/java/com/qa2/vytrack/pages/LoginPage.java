@@ -67,7 +67,7 @@ public class LoginPage {
             action.moveToElement(loginPage.UsernameBox).click();
 
             action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
-            DriverUtilities.waitFor(3);
+            DriverUtilities.waitFor(1);
 
             action.sendKeys(Login_Credentials.getCorrUsernameList().get(4)).perform();
 
@@ -75,13 +75,13 @@ public class LoginPage {
             action.moveToElement(loginPage.PasswordBox).click();
 
             action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
-            DriverUtilities.waitFor(3);
+            DriverUtilities.waitFor(1);
 
             action.sendKeys(Login_Credentials.getCorrPasswordList().get(0)).perform();
 
         //4.
-            action.moveToElement(loginPage.LoginBtn).click();
-
+            action.moveToElement(loginPage.LoginBtn).click().perform();
+            DriverUtilities.waitFor(5);
     }
 
 
@@ -96,7 +96,7 @@ public class LoginPage {
         action.moveToElement(loginPage.UsernameBox).click();
 
         action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
-        DriverUtilities.waitFor(3);
+        DriverUtilities.waitFor(1);
 
         action.sendKeys(Login_Credentials.getCorrUsernameList().get(7)).perform();
 
@@ -104,12 +104,42 @@ public class LoginPage {
         action.moveToElement(loginPage.PasswordBox).click();
 
         action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
-        DriverUtilities.waitFor(3);
+        DriverUtilities.waitFor(1);
 
         action.sendKeys(Login_Credentials.getCorrPasswordList().get(0)).perform();
 
         //4.
-        action.moveToElement(loginPage.LoginBtn).click();
+        action.moveToElement(loginPage.LoginBtn).click().perform();
+        DriverUtilities.waitFor(3);
+
+
+    }
+
+    public static void Login_as_TruckDriver(WebDriver driver){
+        //1.
+        LoginPage loginPage = new LoginPage();
+
+        Actions action = new Actions(driver);
+
+        //2. identify UsernameBox, clear and input username
+        action.moveToElement(loginPage.UsernameBox).click();
+
+        action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
+        DriverUtilities.waitFor(1);
+
+        action.sendKeys(Login_Credentials.getCorrUsernameList().get(1)).perform();
+
+        //3. identify PasswordBox, clear and input password
+        action.moveToElement(loginPage.PasswordBox).click();
+
+        action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("A")).keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
+        DriverUtilities.waitFor(1);
+
+        action.sendKeys(Login_Credentials.getCorrPasswordList().get(0)).perform();
+
+        //4.
+        action.moveToElement(loginPage.LoginBtn).click().perform();
+        DriverUtilities.waitFor(5);
     }
 
 

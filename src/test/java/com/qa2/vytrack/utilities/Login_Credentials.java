@@ -23,8 +23,8 @@ public class Login_Credentials {
         UsernameList.add("salesmanager145");
 
         //1.3.
-        System.out.println("Size of the UsernameList is : " + UsernameList.size() + " elements");
-        System.out.println("------------------------------------------------------");
+        //System.out.println("Size of the UsernameList is : " + UsernameList.size() + " elements");
+        //System.out.println("------------------------------------------------------");
 
         //1.4.
         return UsernameList;
@@ -40,8 +40,8 @@ public class Login_Credentials {
         PasswordsList.add("UserUser123");
 
         //2.3.
-        System.out.println("Size of the PasswordList is : " + PasswordsList.size() + " elements");
-        System.out.println("------------------------------------------------------");
+        //System.out.println("Size of the PasswordList is : " + PasswordsList.size() + " elements");
+        //System.out.println("------------------------------------------------------");
 
         //2.4.
         return  PasswordsList;

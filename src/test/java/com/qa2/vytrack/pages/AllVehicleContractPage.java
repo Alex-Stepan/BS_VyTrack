@@ -1,6 +1,7 @@
 package com.qa2.vytrack.pages;
 
 import com.qa2.vytrack.utilities.Driver;
+import com.qa2.vytrack.utilities.DriverUtilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,8 @@ public class AllVehicleContractPage {
 
     /** Verify Title on Login Page */
     public static void AllVehicleContractPage_TitleVerify(WebDriver driver) {
+        DriverUtilities.waitFor(2);
+
         String act_Title = driver.getTitle();
         String exp_Title = "All - Vehicle Contract - Entities - System - Car - Entities - System";
         if (act_Title.equals(exp_Title)){

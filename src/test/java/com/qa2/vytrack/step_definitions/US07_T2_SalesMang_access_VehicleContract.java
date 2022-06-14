@@ -4,6 +4,7 @@ import com.qa2.vytrack.pages.AllVehicleContractPage;
 import com.qa2.vytrack.pages.DashboardPage;
 import com.qa2.vytrack.pages.LoginPage;
 import com.qa2.vytrack.utilities.DriverTestBase;
+import com.qa2.vytrack.utilities.DriverUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,25 +32,4 @@ public class US07_T2_SalesMang_access_VehicleContract extends DriverTestBase {
         DashboardPage.DashboardPage_TitleVerify(driver);
     }
 
-
-    @When("select Contracts feature under Fleet Module")
-    public void select_contracts_feature_under_fleet_module() {
-        Actions action = new Actions(driver);
-
-        action.moveToElement(DashboardPage.FleetModule).click().perform();
-
-        action.moveToElement(DashboardPage.VehicleContractFeature).click().perform();
-
-    }
-
-
-    @Then("should navigate to Vehicle Contract page")
-    public void should_navigate_to_vehicle_contract_page() {
-
-        AllVehicleContractPage.AllVehicleContractPage_TitleVerify(driver);
-
-        driver.quit();
-
-
-    }
 }

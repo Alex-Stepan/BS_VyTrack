@@ -1,4 +1,4 @@
-Feature: From VehicleContract page access the Vehicle Contract
+Feature: StoreManager From VehicleContract page access the Vehicle Contract
   Background:
     Given StoreManager on DashboardPage
 
